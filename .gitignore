@@ -1,4 +1,4 @@
-# Google App Engine generated folder
+ Google App Engine generated folder
 appengine-generated/
 # Function to add a new entry to the dictionary
 def add_entry(word, definition):
