@@ -1,2 +1,45 @@
 # Google App Engine generated folder
 appengine-generated/
+# Function to add a new entry to the dictionary
+def add_entry(word, definition):
+    dictionary[word] = definition
+
+# Function to retrieve a definition for a given word
+def get_definition(word):
+    return dictionary[word]
+
+# Function to print all definitions
+def print_all_definitions():
+    for word in dictionary:
+        print(word + ": " + dictionary[word])
+
+# Dictionary object
+dictionary = {
+    "Hello": "A greeting used to say hello",
+    "Goodbye": "A phrase used to say goodbye"
+}
+
+# Main program loop
+while True:
+    # Get command
+    command = input("Enter command (add, get, print, quit): ")
+    if command == "add":
+        # Get word and definition
+        word = input("Enter word: ")
+        definition = input("Enter definition: ")
+        # Add word and definition to dictionary
+        add_entry(word, definition)
+    elif command == "get":
+        # Get word
+        word = input("Enter word: ")
+        # Get definition for word
+        definition = get_definition(word)
+        print("Definition: " + definition)
+    elif command == "print":
+        # Print all definitions
+        print_all_definitions()
+    elif command == "quit":
+        # Quit program
+        break
+    else:
+        print("Invalid command.")
